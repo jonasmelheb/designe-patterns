@@ -1,4 +1,4 @@
-package fr.diginamic.factory;
+package fr.diginamic.factory.entities;
 
 public class TelephoneProtable extends ObjetConnecte{
     public TelephoneProtable(Integer limiteVolts) {

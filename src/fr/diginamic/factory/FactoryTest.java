@@ -1,5 +1,9 @@
 package fr.diginamic.factory;
 
+import fr.diginamic.factory.entities.ObjectConnecteEnum;
+import fr.diginamic.factory.entities.ObjetConnecte;
+import fr.diginamic.factory.facotries.ObjectConnecteFactory;
+
 public class FactoryTest {
     public static void main(String[] args) {
         ObjetConnecte obj1 = ObjectConnecteFactory.getObjectConnecte(ObjectConnecteEnum.ENSEINTE_CONNECTEE);
