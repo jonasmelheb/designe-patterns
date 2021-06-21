@@ -15,17 +15,17 @@ public class ZooBuilder {
         return this;
     }
 
-    public ZooBuilder appendAnimal(String nomZone, Animal animal){
+    public ZooBuilder appendAnimal(String nomZone, Animal animal) throws Exception {
         List<Zone> zones = zoo.getZones();
         for (Zone z :
                 zones) {
             if (z.getNom().equals(nomZone)) {
-                if (z.getCapacite() > z.getAnimalList().size()) {
+                if (z.getCapacite() > z.getAnimals().size()) {
                     z.addAnimal(animal);
                     return this;
                 }
                 else {
-                    System.out.println("La zone est pleine");
+                    throw new Exception("La zone est pleine");
                 }
             }
         }

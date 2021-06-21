@@ -6,7 +6,7 @@ import java.util.List;
 public class Zone {
     private String nom;
     private Integer capacite;
-    private List<Animal> animalList = new ArrayList<>();
+    private List<Animal> animals = new ArrayList<>();
 
     public Zone() {
     }
@@ -16,10 +16,10 @@ public class Zone {
         this.capacite = capacite;
     }
 
-    public Zone(String nom, Integer capacite, List<Animal> animalList) {
+    public Zone(String nom, Integer capacite, List<Animal> animals) {
         this.nom = nom;
         this.capacite = capacite;
-        this.animalList = animalList;
+        this.animals = animals;
     }
 
     public String getNom() {
@@ -38,16 +38,16 @@ public class Zone {
         this.capacite = capacite;
     }
 
-    public List<Animal> getAnimalList() {
-        return animalList;
+    public List<Animal> getAnimals() {
+        return animals;
     }
 
-    public void setAnimalList(List<Animal> animalList) {
-        this.animalList = animalList;
+    public void setAnimals(List<Animal> animals) {
+        this.animals = animals;
     }
 
     public void addAnimal(Animal animal){
-        this.animalList.add(animal);
+        this.animals.add(animal);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class Zone {
         return "Zone{" +
                 "nom='" + nom + '\'' +
                 ", capacite=" + capacite +
-                ", animalList=" + animalList +
-                '}';
+                ", animals=" + animals +
+                "} \n";
     }
 }

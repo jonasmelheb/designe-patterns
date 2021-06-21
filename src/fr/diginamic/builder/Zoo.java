@@ -43,7 +43,7 @@ public class Zoo {
     public String toString() {
         return "Zoo{" +
                 "nom='" + nom + '\'' +
-                ", zones=" + zones +
+                "\n, zones=" + zones +
                 '}';
     }
 }
