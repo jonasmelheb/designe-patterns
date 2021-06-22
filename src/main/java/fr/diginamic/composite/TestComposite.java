@@ -3,32 +3,32 @@ package fr.diginamic.composite;
 public class TestComposite {
 
     public static void main(String[] args) {
-        Service ser1 = new Service("DSIN");
-        Service ser2 = new Service("Big Data");
-        Service ser3 = new Service("Java Dev");
+        Service DSIN = new Service("DSIN");
+        Service BigData = new Service("Big Data");
+        Service JavaDev = new Service("Java Dev");
 
-        Employe emp1 = new Employe(10000, "RASPEY", "Cécile");
-        Employe emp2 = new Employe(8000, "BECHKHAR", "Bilel");
-        Employe emp3 = new Employe(7500, "RANMEY", "JB");
-        Employe emp4 = new Employe(3500, "PINTUR", "Eloi");
-        Employe emp5 = new Employe(7500, "GUINEAU", "Kevin");
-        Employe emp6 = new Employe(3500, "MARTIN", "Paul");
+        Employe directeur = new Employe(10000, "RASPEY", "Cécile");
+        Employe architecte = new Employe(8000, "BECHKHAR", "Bilel");
+        Employe chefDeProjet = new Employe(7500, "RANMEY", "JB");
+        Employe concepteur = new Employe(3500, "PINTUR", "Eloi");
+        Employe chefDeService = new Employe(7500, "GUINEAU", "Kevin");
+        Employe leadDev = new Employe(3500, "MARTIN", "Paul");
 
-        ser1.addElement(emp1);
-        ser1.addElement(emp2);
+        DSIN.addElement(directeur);
+        DSIN.addElement(architecte);
 
-        ser2.addElement(emp3);
-        ser2.addElement(emp4);
+        BigData.addElement(chefDeProjet);
+        BigData.addElement(concepteur);
 
-        ser3.addElement(emp5);
-        ser3.addElement(emp6);
+        JavaDev.addElement(chefDeService);
+        JavaDev.addElement(leadDev);
 
-        ser1.addElement(ser2);
-        ser1.addElement(ser3);
+        DSIN.addElement(BigData);
+        DSIN.addElement(JavaDev);
 
-        System.out.println(ser1.calculerSalaire());
-        System.out.println(ser2.calculerSalaire());
-        System.out.println(ser3.calculerSalaire());
+        System.out.println("Salaire total de DSIN: " + DSIN.calculerSalaire());
+        System.out.println("Salaire total de Big Data: " + BigData.calculerSalaire());
+        System.out.println("Salaire total de Java Dev: " + JavaDev.calculerSalaire());
     }
 
 }
