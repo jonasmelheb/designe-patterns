@@ -5,24 +5,11 @@ public class Avion {
     private AvionEtat etat;
 
     public void rentrerTrainAtterrissage() {
-        etat.action();
-//        if (etat.equals("AU SOL")) {
-//            System.out.println("L'avion est au sol. Il est impossible de rentrer le train d'atterrissage.");
-//        } else if (etat.equals("EN VOL")) {
-//            System.out.println("Train d'atterrissage rentré.");
-//        } else if (etat.equals("EN APPROCHE")) {
-//            System.out.println("Nous allons atterrir. Il est impossible de rentrer le train d'atterrissage.");
-//        }
+        etat.actionRenter();
     }
 
     public void sortirTrainAtterrissage() {
-        if (etat.equals("AU SOL")) {
-            System.out.println("L'avion est au sol. Le train d'atterrissage est déjà sorti.");
-        } else if (etat.equals("EN VOL")) {
-            System.out.println("L'avion est en vol. Il est interdit de sortir le train d'atterrissage.");
-        } else if (etat.equals("EN APPROCHE")) {
-            System.out.println("Nous allons atterrir. Le train d'atterrissage est sorti.");
-        }
+       etat.actionSortir();
     }
 
     /**
