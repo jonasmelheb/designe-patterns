@@ -1,5 +1,5 @@
 package fr.diginamic.strategy;
 
 public interface Strategy {
-    public void trier(Integer[] array);
+    void trier(Integer[] array);
 }
