@@ -22,14 +22,12 @@ public class ZooBuilder {
             if (z.getNom().equals(nomZone)) {
                 if (z.getCapacite() > z.getAnimals().size()) {
                     z.addAnimal(animal);
-                    return this;
-                }
-                else {
+                } else {
                     throw new Exception("La zone est pleine");
                 }
             }
         }
-        return null;
+        return this;
     }
 
     public Zoo get() {
