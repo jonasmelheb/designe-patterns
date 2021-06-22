@@ -12,19 +12,19 @@ public class Configuration {
         init();
     }
 
-    private void init() {
-        ResourceBundle configuration = ResourceBundle.getBundle("configuration") ;
-        url = configuration.getString("db.url");
-        user = configuration.getString("db.user");
-        password = configuration.getString("db.password");
-    }
-
     private static class ConfigHolder {
         private final static Configuration instance = new Configuration();
     }
 
     public static Configuration getInstance() {
         return ConfigHolder.instance;
+    }
+
+    private void init() {
+        ResourceBundle configuration = ResourceBundle.getBundle("configuration") ;
+        url = configuration.getString("db.url");
+        user = configuration.getString("db.user");
+        password = configuration.getString("db.password");
     }
 
     public String getUrl() {
