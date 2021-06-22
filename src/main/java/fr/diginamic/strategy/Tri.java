@@ -5,13 +5,24 @@ public class Tri {
         switch (typeTri) {
             case BUBBLE_SORT:
                 Strategy bubble = StrategyFactory.getInstanceTri(TypeTri.BUBBLE_SORT);
-                bubble.trier(arr);
+                if (bubble != null) {
+                    bubble.trier(arr);
+                }
+                break;
             case INSERTION_SORT:
                 Strategy insertion = StrategyFactory.getInstanceTri(TypeTri.INSERTION_SORT);
-                insertion.trier(arr);
+                if (insertion != null) {
+                    insertion.trier(arr);
+                }
+                break;
             case SELECTION_SORT:
                 Strategy selection = StrategyFactory.getInstanceTri(TypeTri.SELECTION_SORT);
-                selection.trier(arr);
+                if (selection != null) {
+                    selection.trier(arr);
+                }
+                break;
+            default:
+                System.out.println("Type " + typeTri + "n'existe pas");
         }
     }
 }
